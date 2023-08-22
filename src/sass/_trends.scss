@@ -1,0 +1,90 @@
+.trends {
+  margin-bottom: 64px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    width: calc(25% - 3px);
+    padding: 133px 24px 13px 20px;
+    margin-right: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #606260;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: #000;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.6;
+      z-index: 1;
+    }
+  }
+
+  &__card-first {
+    background-image: url("img/trend1.jpg");
+  }
+
+  &__card-second {
+    background-image: url("img/trend2.jpg");
+  }
+
+  &__card-third {
+    padding: 133px 19px 13px 24px;
+    background-image: url("img/trend3.jpg");
+  }
+
+  &__card-fourth {
+    margin-right: 0;
+    padding: 133px 19px 13px 24px;
+    background-image: url("img/trend4.jpg");
+  }
+}
+
+.card {
+  &__desc {
+    padding: 24px 32px 30px 31px;
+    border: solid #b59f5b 3px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 2.5;
+    font-weight: 700;
+    color: #b59f5b;
+  }
+
+  &__tag {
+    &:first-child {
+      margin-right: 21px;
+    }
+  }
+
+  &__title-link {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+  }
+}

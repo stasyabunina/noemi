@@ -1,0 +1,92 @@
+@media (any-hover: hover) {
+  .header {
+    &__nav-item {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .card {
+    &__tag {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__title-link {
+      &:hover {
+        color: #b59f5b;
+      }
+    }
+  }
+
+  .post {
+    &__title {
+      &:hover {
+        color: #b59f5b;
+      }
+    }
+
+    &__tags-item {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .new-post {
+    &__title {
+      &:hover {
+        color: #b59f5b;
+      }
+    }
+  }
+
+  .aside {
+    &__btn {
+      &:hover {
+        background-color: #323232;
+      }
+    }
+  }
+
+  .topic {
+    &__link {
+      &:hover {
+        color: #b59f5b;
+      }
+    }
+  }
+
+  .tags {
+    &__item {
+      &:hover {
+        border: 3px solid #b59f5b;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .product {
+    &__btn {
+      &:hover {
+        background-color: #323232;
+      }
+    }
+
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .popup {
+    &__btn {
+      &:hover {
+        background-color: #323232;
+      }
+    }
+  }
+}
