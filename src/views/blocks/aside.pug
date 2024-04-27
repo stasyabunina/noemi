@@ -1,0 +1,59 @@
+aside.aside
+  -
+    const sections = [
+      {name: 'new-post', title: 'Новые посты', posts: [
+        {img: 'img/2.jpg', imgAlt: 'Человек стоящий на пляже', time: {text: '14 июня 2019', date: '2019-06-14'}, title: '10 мест, ради которых стоит проснуться'},
+        {img: 'img/151.jpg', imgAlt: 'Девушка на пляже занимающаяся йогой', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Йога для домашних'},
+        {img: 'img/45.jpg', imgAlt: 'Кресло со стоящим рядом пианино', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Как мы превратили классное место в балкон'},
+        {img: 'img/501.jpg', imgAlt: 'Кухонный стол с находящейся на нем едой', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Кулинарный подход к науке'},
+        {img: 'img/7.jpg', imgAlt: 'Три девушки стоящие спиной', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Лучшие прически для распущенных волос'}
+      ]},
+      {name: 'subscribe', title: 'Рассылка'},
+      {name: 'tags', title: 'Теги', tags: ['Fashion', 'Music', 'Lifestyle', 'Art', 'Interior', 'Travel', 'Food', 'Health']},
+      {name: 'topic', title: 'Темы', topics: [
+        {name: 'Красота', amount: 12},
+        {name: 'Здоровье', amount: 4},
+        {name: 'Образ жизни', amount: 145},
+        {name: 'Музыка', amount: 28},
+        {name: 'Спорт', amount: 62},
+        {name: 'Йога', amount: 8}
+      ]}
+    ];
+  each section in sections
+    section.aside__section
+      h3.section__title.aside__title
+        a.section__title-link(href='#')=section.title
+      case section.name
+        when 'new-post'
+          ul(class=`${section.name}s`)
+            each post in section.posts
+              li(class=section.name)
+                div(class=`${section.name}__preview`)
+                  img(class=`${section.name}__img`, alt=post.imgAlt, src=post.img)
+                div(class=`${section.name}__desc`)
+                  time(class=`${section.name}__date`, datetime=post.time.date)=post.time.text
+                  h3(class=`${section.name}__title`)
+                    a(href='#')=post.title
+          form.search(action='#', method='get')
+            label.search__wrapper
+              span.visually-hidden Поиск
+              input.search__field.search__bar(type='search', placeholder='Найти...', required)
+            button.aside__btn.search__button
+              span.visually-hidden Найти
+        when 'subscribe'
+          form(class=section.name, action='#', method='get')
+            label(class=`${section.name}__label`)
+              span.visually-hidden Ввод email-адреса
+              input.search__field.subscribe__email-field(id='email', type='email', name='email', placeholder='Ваш email-адрес', required)
+            button.aside__btn.subscribe__button Подписаться
+        when 'tags'
+          ul(class=`${section.name}__list`)
+            each tag in section.tags
+              li(class=`${section.name}__item`)
+                a(class=`${section.name}__link`, href='#')=tag
+        when 'topic'
+          ul(class=`${section.name}__list`)
+            each topic in section.topics
+              li(class=`${section.name}__item`)
+                a(class=`${section.name}__link`, href='#')=topic.name
+                  sup(class=`${section.name}__posts-amount`)=topic.amount

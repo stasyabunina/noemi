@@ -52,6 +52,7 @@ body {
   margin: 0;
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
+  color: #121212;
   background-color: white;
 }
 
@@ -148,10 +149,6 @@ textarea {
   flex-grow: 1;
 }
 
-.stop-scroll {
-  overflow: hidden;
-}
-
 .is-label-invalid {
   font-family: "OpenSans", sans-serif;
   font-size: 12px;
@@ -169,3 +166,8 @@ textarea {
 @import "footer";
 @import "popup";
 @import "media";
+@import "choices";
+
+.stop-scroll {
+  overflow: hidden;
+}

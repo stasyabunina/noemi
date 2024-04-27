@@ -4,6 +4,9 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+
+
   }
 
   &__card {
@@ -31,25 +34,25 @@
       opacity: 0.6;
       z-index: 1;
     }
-  }
 
-  &__card-first {
-    background-image: url("img/trend1.jpg");
-  }
+    &:nth-child(1) {
+      background-image: url("img/trend1.jpg");
+    }
 
-  &__card-second {
-    background-image: url("img/trend2.jpg");
-  }
+    &:nth-child(2) {
+      background-image: url("img/trend2.jpg");
+    }
 
-  &__card-third {
-    padding: 133px 19px 13px 24px;
-    background-image: url("img/trend3.jpg");
-  }
+    &:nth-child(3) {
+      padding: 133px 19px 13px 24px;
+      background-image: url("img/trend3.jpg");
+    }
 
-  &__card-fourth {
-    margin-right: 0;
-    padding: 133px 19px 13px 24px;
-    background-image: url("img/trend4.jpg");
+    &:nth-child(4) {
+      margin-right: 0;
+      padding: 133px 19px 13px 24px;
+      background-image: url("img/trend4.jpg");
+    }
   }
 }
 

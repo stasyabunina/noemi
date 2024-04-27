@@ -1,0 +1,8 @@
+footer.footer
+  ul.footer__socials.socials
+    - const socials = ['Dribbble', 'Pinterest', 'Tumblr'];
+    each social in socials
+      li.socials__item
+        a(class=`socials__icon socials__${social.toLowerCase()}-icon`, href='#')
+          span.visually-hidden=social
+  a.footer__copyright-link(href='#') Copyright © 2009–2019 City Blog LLC.

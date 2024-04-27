@@ -1,0 +1,41 @@
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0;
+}
+
+.choices__inner {
+  padding: 16px 17px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #939594;
+  border: none;
+}
+
+.is-focused .choices__inner {
+  border: solid #b59f5b 1px;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__item {
+  font-size: 13px;
+  color: #939594;
+}
+
+.choices[data-type*=select-one]::after {
+  border: none;
+  width: 8px;
+  height: 16px;
+  right: 15px;
+  z-index: 120;
+  margin-top: 0;
+  transform: translateY(-50%);
+  background-image: url("img/form-arrows.svg");
+  background-size: 8px 16px;
+  background-position: right 15px center;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin-top: 0;
+}

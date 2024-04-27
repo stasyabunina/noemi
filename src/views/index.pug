@@ -1,0 +1,20 @@
+extends layouts/default
+
+block variables
+  - const title = 'Noemi'
+
+block content
+  include blocks/header
+  include blocks/trends
+  .container
+    .content
+      include blocks/main
+      include blocks/aside
+    include blocks/products
+  include blocks/footer
+  include blocks/popup
+
+block scripts
+  script(src='https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js')
+  script(src='libs/just-validate.min.js')
+  script(src='js/script.js')

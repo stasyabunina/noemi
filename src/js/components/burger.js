@@ -1,15 +1,13 @@
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.header__nav')
-const menuLinks = document.querySelectorAll('.header__nav-link')
+import vars from '../_vars';
 
-burger.addEventListener('click', () => {
-  nav.classList.toggle('header__nav--visible');
+vars.burger.addEventListener('click', () => {
+  vars.nav.classList.toggle('header__nav--visible');
   document.body.classList.toggle('stop-scroll')
 })
 
-menuLinks.forEach((link) => {
+vars.menuLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    nav.classList.remove('header__nav--visible');
+    vars.nav.classList.remove('header__nav--visible');
     document.body.classList.remove('stop-scroll')
   })
 })
@@ -17,8 +15,8 @@ menuLinks.forEach((link) => {
 document.addEventListener('click', (e) => {
   let target = e.target;
 
-  if (!target.closest('.burger') && !target.closest('.header__nav')) {
-    nav.classList.remove('header__nav--visible');
+  if (!target.closest('.burger') && !target.closest('.header__nav') && !target.closest('.popup')) {
+    vars.nav.classList.remove('header__nav--visible');
     document.body.classList.remove('stop-scroll')
   }
 })

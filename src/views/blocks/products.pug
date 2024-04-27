@@ -1,0 +1,54 @@
+section.products
+  h2.section__title.products__title Наши изделия
+  ul.products__list
+    -
+      const products = [
+        {img: {
+          src: 'img/shop-item-desk1.jpg',
+          srcSet1: 'img/shop-item-tablet1.jpg',
+          srcSet2: 'img/shop-item-mobile1.jpg',
+          alt: 'Подушка с принтом HANG OUT SPOT'
+        },
+        title: 'Подушки на диван',
+        primaryPrice: '800 ₽',
+        secondaryPrice: '1000 ₽'},
+        {img: {
+          src: 'img/shop-item-desk2.jpg',
+          srcSet1: 'img/shop-item-tablet2.jpg',
+          srcSet2: 'img/shop-item-mobile2.jpg',
+          alt: 'Кукла Зайчик'
+        },
+        title: 'Кукла «Зайчик»',
+        primaryPrice: '3500 ₽'},
+        {img: {
+          src: 'img/shop-item-desk3.jpg',
+          srcSet1: 'img/shop-item-tablet3.jpg',
+          srcSet2: 'img/shop-item-mobile3.jpg',
+          alt: 'Рамка со стоящей рядом вазой с цветами'
+        },
+        title: 'Шестиугольная рамка',
+        primaryPrice: '400 ₽',
+        secondaryPrice: '500 ₽'}
+      ]
+    each product in products
+      li.product__item
+        article.product__card
+          picture.product__preview
+            source(srcset=product.img.srcSet1, media='(max-width: 1200px) and (min-width: 641px)')
+            source(srcset=product.img.srcSet2, media='(max-width: 640px)')
+            img.product__img(src=product.img.src, alt=product.img.alt)
+          .product__info
+            h3.product__name=product.title
+            case product.title
+              when 'Подушки на диван'
+                p.product__desc Набор из двух подушек с модными принтами. Видео о создании #[a.product__link(href='#') здесь]
+              when 'Кукла «Зайчик»'
+                p.product__desc Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена #[a.product__link(href='#') весенняя серия постов] в блоге и несколько подкастов.
+              when 'Шестиугольная рамка'
+                p.product__desc Необычная рамка для украшения дома из видео #[a.product__link(href='#') «Как сделать рамку из подручных средств за 30 минут»]
+            .product__purchase-info
+              .product__price
+                span.product__primary-price=product.primaryPrice
+                if product.secondaryPrice
+                  span.product__secondary-price=product.secondaryPrice
+              button.product__btn(type='button') В магазин
