@@ -3,13 +3,13 @@
     h2.section__title.popup__title Ваш фидбек
     form.popup__form(action='/', method='post')
       label.popup__label
-        span.popup__text Как часто вы заходите на сайт?
+        span.popup__text Как часто вы&nbsp;заходите на&nbsp;сайт?
         select.popup__select.popup__input(name='Как часто вы заходите на сайт?')
-          - const options = ['Почти каждый день', 'Раз в несколько дней', 'Раз в несколько недель', 'Несколько раз в год'];
+          - const options = ['Почти каждый день', 'Раз в&nbsp;несколько дней', 'Раз в&nbsp;несколько недель', 'Несколько раз в&nbsp;год'];
           each option in options
-            option.popup__option(value=option)=option
+            option.popup__option(value=option)!=option
       .popup__label
-        span.popup__text-second Вы подписаны на e-mail рассылку?
+        span.popup__text-second Вы&nbsp;подписаны на&nbsp;e-mail рассылку?
         .popup__checkbox-wrapper
           label.popup__checkbox-text-wrapper
             input.popup__checkbox.visually-hidden(type='radio', name='Вы подписаны на e-mail рассылку?', value='Да', checked)
@@ -20,7 +20,7 @@
             span.popup__visual-check
             span.popup__text.checkbox-text Нет
       label.popup__label-last
-        span.popup__text Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+        span.popup__text Расскажите, какой контент вы&nbsp;хотели&nbsp;бы видеть на&nbsp;нашем сайте?
         textarea.popup__input.popup__textarea(name='Какой контент вы хотели бы видеть на нашем сайте?', placeholder='Может, больше рецептов?')
       button.popup__btn Отправить
     button.popup__close(type='button')

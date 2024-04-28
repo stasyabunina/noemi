@@ -34,7 +34,7 @@ const styles = () => {
 };
 
 const htmlMinify = () => {
-  return src('src/views/**/*.pug')
+  return src('src/views/*.pug')
     .pipe(pug({ pretty: true }))
     .pipe(htmlmin({
       collapseWhitespace: true
@@ -118,4 +118,4 @@ exports.clean = clean;
 exports.scripts = scripts;
 exports.htmlMinify = htmlMinify;
 
-exports.default = series(clean, scripts, styles, resources, images, svg, svgSprites, htmlMinify);
+exports.default = series(clean, scripts, styles, resources, images, svg, svgSprites, htmlMinify, watchFiles);

@@ -2,10 +2,10 @@ aside.aside
   -
     const sections = [
       {name: 'new-post', title: 'Новые посты', posts: [
-        {img: 'img/2.jpg', imgAlt: 'Человек стоящий на пляже', time: {text: '14 июня 2019', date: '2019-06-14'}, title: '10 мест, ради которых стоит проснуться'},
+        {img: 'img/2.jpg', imgAlt: 'Человек стоящий на пляже', time: {text: '14 июня 2019', date: '2019-06-14'}, title: '10&nbsp;мест, ради которых стоит проснуться'},
         {img: 'img/151.jpg', imgAlt: 'Девушка на пляже занимающаяся йогой', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Йога для домашних'},
-        {img: 'img/45.jpg', imgAlt: 'Кресло со стоящим рядом пианино', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Как мы превратили классное место в балкон'},
-        {img: 'img/501.jpg', imgAlt: 'Кухонный стол с находящейся на нем едой', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Кулинарный подход к науке'},
+        {img: 'img/45.jpg', imgAlt: 'Кресло со стоящим рядом пианино', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Как мы&nbsp;превратили классное место в&nbsp;балкон'},
+        {img: 'img/501.jpg', imgAlt: 'Кухонный стол с находящейся на нем едой', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Кулинарный подход к&nbsp;науке'},
         {img: 'img/7.jpg', imgAlt: 'Три девушки стоящие спиной', time: {text: '14 июня 2019', date: '2019-06-14'}, title: 'Лучшие прически для распущенных волос'}
       ]},
       {name: 'subscribe', title: 'Рассылка'},
@@ -33,7 +33,7 @@ aside.aside
                 div(class=`${section.name}__desc`)
                   time(class=`${section.name}__date`, datetime=post.time.date)=post.time.text
                   h3(class=`${section.name}__title`)
-                    a(href='#')=post.title
+                    a(href='#')!=post.title
           form.search(action='#', method='get')
             label.search__wrapper
               span.visually-hidden Поиск

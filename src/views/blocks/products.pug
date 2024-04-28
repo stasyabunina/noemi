@@ -18,7 +18,7 @@ section.products
           srcSet2: 'img/shop-item-mobile2.jpg',
           alt: 'Кукла Зайчик'
         },
-        title: 'Кукла «Зайчик»',
+        title: 'Кукла &laquo;Зайчик&raquo;',
         primaryPrice: '3500 ₽'},
         {img: {
           src: 'img/shop-item-desk3.jpg',
@@ -38,17 +38,17 @@ section.products
             source(srcset=product.img.srcSet2, media='(max-width: 640px)')
             img.product__img(src=product.img.src, alt=product.img.alt)
           .product__info
-            h3.product__name=product.title
+            h3.product__name!=product.title
             case product.title
               when 'Подушки на диван'
-                p.product__desc Набор из двух подушек с модными принтами. Видео о создании #[a.product__link(href='#') здесь]
-              when 'Кукла «Зайчик»'
-                p.product__desc Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена #[a.product__link(href='#') весенняя серия постов] в блоге и несколько подкастов.
+                p.product__desc Набор из&nbsp;двух подушек с&nbsp;модными принтами. Видео о&nbsp;создании #[a.product__link(href='#') здесь]
+              when 'Кукла &laquo;Зайчик&raquo;'
+                p.product__desc Интерьерная рукодельная кукла &laquo;Зайчик&raquo;, созданию которой посвящена #[a.product__link(href='#') весенняя серия постов] в&nbsp;блоге и&nbsp;несколько подкастов.
               when 'Шестиугольная рамка'
-                p.product__desc Необычная рамка для украшения дома из видео #[a.product__link(href='#') «Как сделать рамку из подручных средств за 30 минут»]
+                p.product__desc Необычная рамка для украшения дома из&nbsp;видео #[a.product__link(href='#') &laquo;Как сделать рамку из&nbsp;подручных средств за&nbsp;30&nbsp;минут&raquo;]
             .product__purchase-info
               .product__price
                 span.product__primary-price=product.primaryPrice
                 if product.secondaryPrice
                   span.product__secondary-price=product.secondaryPrice
-              button.product__btn(type='button') В магазин
+              button.product__btn(type='button') В&nbsp;магазин

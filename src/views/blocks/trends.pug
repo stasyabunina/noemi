@@ -3,10 +3,10 @@ section.trends
   ul.trends__list
     -
       const cards = [
-        {tags: ['Lifestyle', 'Interior'], title: 'Сейчас в тренде: сад на подоконнике'},
-        {tags: ['Food'], title: 'сыры на красивых картинках из интернета: какие они на вкус?'},
-        {tags: ['Lifestyle', 'Travel'], title: 'СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ'},
-        {tags: ['Food', 'Health'], title: 'Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?'}
+        {tags: ['Lifestyle', 'Interior'], title: 'Сейчас в&nbsp;тренде: сад на&nbsp;подоконнике'},
+        {tags: ['Food'], title: 'сыры на&nbsp;красивых картинках из&nbsp;интернета: какие они на&nbsp;вкус?'},
+        {tags: ['Lifestyle', 'Travel'], title: 'СОБИРАЕМСЯ В&nbsp;ПЕРВЫЙ ПОХОД В&nbsp;ГОРЫ'},
+        {tags: ['Food', 'Health'], title: 'Сейчас в&nbsp;тренде: сКОЛЬКО ВИТАМИНА c&nbsp;В&nbsp;ЛИМОНАХ?'}
       ];
     each card in cards
       li.trends__card
@@ -16,4 +16,4 @@ section.trends
               li.card__tag
                 a.card__link(href='#')=tag
           h3.card__title
-            a.card__title-link(href='#')=card.title
+            a.card__title-link(href='#')!=card.title
