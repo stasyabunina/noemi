@@ -119,3 +119,4 @@ exports.scripts = scripts;
 exports.htmlMinify = htmlMinify;
 
 exports.default = series(clean, scripts, styles, resources, images, svg, svgSprites, htmlMinify, watchFiles);
+exports.build = series(clean, scripts, styles, resources, images, svg, svgSprites, htmlMinify);
