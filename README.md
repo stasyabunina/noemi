@@ -9,4 +9,5 @@
 + [Gulp](https://gulpjs.com/) 
 + [Pug](https://pugjs.org/api/getting-started.html) 
 + SCSS/Sass
++ JS
 + и другое...
